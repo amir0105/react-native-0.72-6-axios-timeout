@@ -135,7 +135,7 @@ function _shouldRunE2E() {
   try {
     const gitCommand = 'git log -1 --pretty=format:"%B" | head -n 1';
     const commitMessage = String(execSync(gitCommand)).trim();
-    console.log(`commitMessage: ${commitMessage}`)
+    console.log(`commitMessage: ${commitMessage}`);
     return commitMessage.indexOf('#run-e2e-tests') >= 0;
   } catch (error) {
     console.error(error);
